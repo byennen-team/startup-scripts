@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>org.nhabit.Selenium</string>
+        <key>OnDemand</key>
+        <true/>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/bin/java</string>
+            <string>-jar</string>
+            <string>/usr/local/lib/selenium/selenium-server-standalone-2.42.2.jar</string>
+            <string>-role</string>
+            <string>webdriver</string>
+            <string>-hub</string>
+            <string> http://54.200.175.37:4444/grid/register</string>
+            <string>-Dwebdriver.chrome.driver=/usr/local/bin//chromedriver</string>
+            <string>-browser</string>
+            <string>browserName="chrome",maxInstances=2</string>
+            <string>-browser</string>
+            <string>browserName="firefox",maxInstances=2</string>
+            <string>-browser</string>
+            <string>browserName="safari",maxInstances=2</string>
+        </array>
+        <key>ServiceDescription</key>
+        <string>Selenium Server</string>
+        <key>StandardErrorPath</key>
+        <string>/var/log/selenium/hub.log</string>
+        <key>StandardOutPath</key>
+        <string>/var/log/selenium/hub.log</string>
+</dict>
+</plist>
